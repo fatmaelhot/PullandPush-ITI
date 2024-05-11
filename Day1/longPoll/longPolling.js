@@ -9,6 +9,7 @@ function longPoll() {
 
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.readyState === 4) {
+            console.log('data', xhr.responseText)
             var response = JSON.parse(xhr.responseText);
             contentDiv.innerHTML = ''; 
 
